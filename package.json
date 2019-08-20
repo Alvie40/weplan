@@ -1,0 +1,22 @@
+{
+  "name": "weplan",
+  "version": "1.0.0",
+  "description": "Project 3 Wedding Planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alvie40/weplan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alvie40/weplan/issues"
+  },
+  "homepage": "https://github.com/Alvie40/weplan#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
