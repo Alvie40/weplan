@@ -1,17 +1,16 @@
 {
   "name": "weplan",
   "version": "1.0.0",
-  "description": "Project 3 Wedding Planner",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alvie40/weplan.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,9 +18,6 @@
   },
   "homepage": "https://github.com/Alvie40/weplan#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^1.19.1",
-    "passport": "^0.4.0",
-    "passport-google-oauth20": "^2.0.0"
+    "express": "^4.17.1"
   }
 }
