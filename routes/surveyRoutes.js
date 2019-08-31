@@ -14,12 +14,13 @@ module.exports = app => {
     const surveys = await Survey.find({ _user: req.user.id }).select({
       recipients: false
     });
-
     res.send(surveys);
   });
 
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
-    res.send("Thanks for voting!");
+    Survey.findOneAndUpdate({ _id: req.params.surveyId }, { $inc: { yes: 1 } })
+      .then(() => res.send("Thanks for voting!"))
+      .catch(err => res.status(500).send(err));
   });
 
   app.post("/api/surveys/webhooks", (req, res) => {
