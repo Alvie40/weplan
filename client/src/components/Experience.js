@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import Modal from "react-modal";
 import { fetchExperiences, makePayment } from "../actions";
+import TopicContainer from "./TopicContainer.component";
 
 class Experience extends Component {
   state = {
@@ -58,7 +59,7 @@ class Experience extends Component {
     };
 
     return (
-      <div>
+      <TopicContainer class="experience">
         <Modal
           isOpen={showModal}
           onRequestClose={this.closeModal}
@@ -76,15 +77,16 @@ class Experience extends Component {
         </Modal>
 
         <h1>Experiences</h1>
-        <ul>
+        <p>Explanation</p>
+        <div className="content-wrapper">
           {experiences.map((e, i) => (
-            <li>
-              <div>{e.title}</div>
+            <div>
+              <h2>{e.title}</h2>
               <img width="400" height="300" src={e.imageUrl} /> <br />
-              Total Value: <div>${e.totalValue}</div>
-              Amount Received: <div>${e.amountReceived}</div>
-              Amount Needed: <div>${e.totalValue - e.amountReceived}</div>
-              Amount to Donate:{" "}
+              Total Value: <p>${e.totalValue}</p>
+              Amount Received: <p>${e.amountReceived}</p>
+              Amount Needed: <p>${e.totalValue - e.amountReceived}</p>
+              <span>Amount to Donate:</span>
               <input
                 required
                 type="number"
@@ -95,10 +97,10 @@ class Experience extends Component {
               <button onClick={() => this.handleExperienceSelected(e, i)}>
                 Pay
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
-      </div>
+        </div>
+      </TopicContainer>
     );
   }
 }

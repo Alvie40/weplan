@@ -22,9 +22,14 @@ import BrideAndGroom from "./components/BrideAndGroom";
 import Experience from "./components/Experience";
 import SurveyNew from "./components/surveys/SurveyNew";
 import Nav from "./components/Nav";
+import Wedding from "./components/Wedding";
+import Logistics from "./components/Logistics";
+import Thingstodo from "./components/Thingstodo";
+import TitleBar from "./components/TitleBar.component";
 import "./css/normalize.css";
 import "./css/skeleton.css";
 import "./css/style.css";
+
 window.axios = axios;
 
 Modal.setAppElement("#root");
@@ -32,6 +37,7 @@ const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 const WebsiteContent = () => (
   <div>
+    <TitleBar id="titlebar"></TitleBar>
     <TopicContainer id="wedding" title="Wedding">
       <div className="container">
         <div className="one-half column">
@@ -449,6 +455,9 @@ ReactDOM.render(
         <Route exact path="/" component={WebsiteContent} />
         <Route path="/rsvp" component={Dashboard} />
         <Route path="/brideandgroom" component={BrideAndGroom} />
+        <Route path="/wedding" component={Wedding} />
+        <Route path="/logistics" component={Logistics}/>
+        <Route path="/thingstodo" component={Thingstodo}/>
         <Route path="/experiences" component={Experience} />
         <Route path="/surveys/new" component={SurveyNew} />
       </div>

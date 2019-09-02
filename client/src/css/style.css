@@ -625,4 +625,43 @@ img.location-image {
 
 .sticky-outer-wrapper{
   z-index: 1000;
+  margin-bottom: 60px;
 }
+
+.content-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.content-wrapper img{
+  border: 10px solid #090909;
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.content-wrapper p{
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.content-wrapper label{
+  color: #b1bf92;
+}
+
+.content-wrapper button{
+  color: white;
+}
+
+.content-wrapper button:hover{
+  background-color: #b1bf92;
+}
+
+
+
+
+

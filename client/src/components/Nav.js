@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Sticky from "react-stickynode";
 import Menu from "./Menu.component";
-import TitleBar from "./TitleBar.component";
 
 export default () => (
   <div>
@@ -17,7 +16,5 @@ export default () => (
         ]}
       ></Menu>
     </Sticky>
-
-    <TitleBar id="titlebar"></TitleBar>
   </div>
 );
