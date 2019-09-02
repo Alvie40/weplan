@@ -5,10 +5,6 @@ import TitleBar from "./TitleBar.component";
 
 export default () => (
   <div>
-    <TitleBar id="titlebar"></TitleBar>
-
-    <div style={{ height: "200px" }}></div>
-
     <Sticky enabled={true}>
       <Menu
         id="menu"
@@ -21,5 +17,7 @@ export default () => (
         ]}
       ></Menu>
     </Sticky>
+
+    <TitleBar id="titlebar"></TitleBar>
   </div>
 );
