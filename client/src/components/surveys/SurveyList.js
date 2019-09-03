@@ -34,7 +34,9 @@ class SurveyList extends Component {
   render() {
     return (
       <div className="survey-cards">
+        <div className="survey-inner">
         {this.renderSurveys()}
+        </div>
       </div>
     );
   }

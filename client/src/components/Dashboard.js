@@ -16,12 +16,12 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <SurveyList />
-        <div className="fixed-action-btn">
-          <Link to="/surveys/new" className="btn-floating btn-large red">
-            <i className="material-icons">add</i>
+        <div className="new-btn-wrap">
+          <Link to="/surveys/new" className="newBtn">
+            New Campaign
           </Link>
         </div>
+        <SurveyList />
       </div>
     );
   }
