@@ -6,7 +6,10 @@ export default () => (
     <div className="container">
       <div className="one-half column">
         <h2>CEREMONY</h2>
-        <p>16:45 @ Sveti Marak Church Courtyard</p>
+        <p>Saturday, August 15<sup>th</sup> 2020 @ 3:00 PM</p>
+        <p>Ocean Edge Resort & Golf Club – Front Lawn 
+        Attire: Formal Garden Party
+</p>
         <p>
           <a href="img/svetimarak.jpg">
             <img

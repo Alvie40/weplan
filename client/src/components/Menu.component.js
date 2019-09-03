@@ -42,9 +42,16 @@ class Menu extends React.Component {
               </li>
             );
           })}
-          <li>
-            <a href="/rsvp">RSVP</a>
-          </li>
+          {localStorage.getItem("loggedIn") ? (
+            <li>
+              <a href="/rsvp?loggedIn">RSVP</a>
+            </li>
+          ) : (
+            <li>
+              <a href="/rsvp">RSVP</a>
+            </li>
+          )}
+
           <li>
             {localStorage.getItem("loggedIn") ? (
               <Link

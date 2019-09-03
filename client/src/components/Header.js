@@ -14,7 +14,7 @@ class Header extends Component {
         return [
           <li key="1"><Link to="/registry">Registry</Link></li>,
           <li key="3" style={{ margin: '0 10px' }}>
-            <Link to="/rsvp">RSVP</Link>
+            <Link to="/rsvp?loggedIn">RSVP</Link>
           </li>,
           <li key="2"><a href="/api/logout">Logout</a></li>
         ];

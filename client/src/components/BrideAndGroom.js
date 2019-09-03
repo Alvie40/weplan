@@ -7,68 +7,32 @@ export default () => (
     name="brideandgroom"
     title="The Bride and Groom"
   >
-    <div className="container">
-      <div className="row">
-        <div className="one-half column">
-          <p>
-            <a href="img/jocelyn-baby.jpg">
-              <img
-                className="thumbnail"
-                src={require("../img/jocelyn-baby.jpg")}
-                alt="Jocelyn"
-              />
-            </a>
-            Jocelyn is a sweet and giving girl who always sees the beauty in
-            people. As exciting as it was to be rasied in New York, she made it
-            her mission to live and explore as many beautiful cities as she
-            could. Thanks to her beloved sister Wendy it was possible to jump
-            from the neon nights of Miami, through the diverse city of London,
-            to then learn the leisurely ways of Italy. While Jocelyn was
-            exploring and realizing her passion in life, she realized she needed
-            to find her way back to the city she knew her dream job was waiting
-            for her in fashion.
-          </p>
-        </div>
-
-        <div className="one-half column">
-          <p>
-            <a href="img/kal-baby.jpg">
-              <img
-                className="thumbnail"
-                src={require("../img/kal-baby.jpg")}
-                alt="Kal"
-              />
-            </a>
-            Kal is a burly and impatient Eastern European. He moved from his
-            homeland Bulgaria to the lovely city of Toronto at the young and
-            tender age of 22. Kal then found himself in the IT mecca of Seattle
-            and realized after 9 years of the beautiful mountain backdrop and
-            serene lakes that he needs to escape to the center of the universe,
-            New York.
-          </p>
-        </div>
-      </div>
-    </div>
-
     <hr />
 
     <p>
       <img
         className="large-image"
         src={require("../img/proposal.jpg")}
-        alt="Kal Proposing To Jocelyn"
+        alt="Andrew Proposing To Jacqueline"
       />
     </p>
 
     <h2>OUR STORY</h2>
     <p>
-      Being children of the modern day and age, our story began with venturing
-      onto OK Cupid. As hesitant as one of us was to engage herself with a
-      complete stranger online (while the other happily explored with
-      enthusiasm) on our first date it soon became apparent that we met the
-      natural occurrences when 2 people meet and all feelings of the unknown
-      disappeared because at that moment right in front of me I was meeting my
-      best friend. As the cliche tale goes, the rest is history.
+      Jacqueline a girl born in Sao Paulo came to find the love of her life in
+      Boston. Andrew a boy that had travel the world but decided to stick around
+      Boston, felt in love with a Brazilian girl that had the same passion for
+      Pokémon as he did. They met through mutual friends, their cupids Ju and
+      Joe. After many serendipity events, some amazing homemade fish taco and
+      great cocktails they realized that they were made for each other. This
+      couple is full of joy and always have amazing time with their family and
+      friends, they also have some crazy stories but I guess we should not write
+      them here… you probably know or lived some of them with them.
+    </p>
+    <br/>
+    <h2>THE PROPOSAL</h2>
+    <p>
+    Throughout the month of December, they decided to give each other little gifts so that it would feel like Christmas during the entire month. They had agreed to give each other 7 little gifts, Jacque ended up giving 8. So, on the night of December 22nd, 2018 Andrew asked her to go to dinner, which was their first date place, and on the way home he told her he had another little gift since she had given him 8 gifts. They got to their apartment and in front of their first Christmas tree, Andrew asked her to close her eyes. He started playing their song and when she opened her eyes, he was right in front of her in one knee with the most beautiful ring asking her to marry him and be his forever. She started crying of joy and said yes to the love of her life. Their proposal story was very intimate, and their favorite part was to surprise their families the next couple of days telling and celebrating with all of them! 
     </p>
   </TopicContainer>
 );
