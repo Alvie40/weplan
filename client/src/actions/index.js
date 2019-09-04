@@ -36,6 +36,12 @@ export const fetchExperiences = () => async dispatch => {
   dispatch({ type: FETCH_EXPERIENCES, payload: res.data });
 };
 
+export const updateExperiences = (experienceId, amountReceived) => async dispatch => {
+  const res = await axios.post(`/api/experiences/${experienceId}`,
+  {amountReceived});
+  dispatch(fetchExperiences());
+};
+
 export const makePayment = params => async dispatch => {
   const res = await axios.post("/api/stripe", params);
   dispatch({ type: MAKE_PAYMENT, payload: res.data });
