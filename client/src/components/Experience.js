@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import Modal from "react-modal";
-import { fetchExperiences, makePayment } from "../actions";
+import { fetchExperiences, makePayment, updateExperiences } from "../actions";
 import TopicContainer from "./TopicContainer.component";
+
 
 class Experience extends Component {
   state = {
@@ -14,15 +15,22 @@ class Experience extends Component {
 
   componentDidMount() {
     this.props.fetchExperiences();
+   
   }
 
-  onStripeToken = tokenRes => {
+  onStripeToken = async tokenRes => {
     const { amount, selectedExperience } = this.state;
-    this.props.makePayment({
-      token: tokenRes.id,
-      amount,
-      experienceId: selectedExperience._id
-    });
+    try {
+      await this.props.makePayment({
+        token: tokenRes.id,
+        amount,
+        experienceId: selectedExperience._id
+      });
+    } catch (err){
+
+    };
+    
+    this.props.updateExperiences(selectedExperience._id, (amount));
   };
 
   handleInputChange = e => {
@@ -73,6 +81,8 @@ class Experience extends Component {
             token={this.onStripeToken}
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
             amount={amount * 100}
+            open={(xis)=> console.log("open str",xis)}
+            close={(xis)=> console.log("close str",xis)}
           />
         </Modal>
 
@@ -111,5 +121,5 @@ const mapStateToProps = ({ experience }) => {
 
 export default connect(
   mapStateToProps,
-  { fetchExperiences, makePayment }
+  { fetchExperiences, makePayment, updateExperiences}
 )(Experience);

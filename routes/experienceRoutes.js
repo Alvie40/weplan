@@ -19,7 +19,20 @@ module.exports = app => {
   });
 
   app.get("/api/experiences/:id", async (req, res) => {
-    ExperienceModel.find({ _id: req.params.id })
+    console.log(req.params.id)
+    ExperienceModel.findById(req.params.id, (data) =>{console.log(data)})
+      .then(experience => {
+        console.log("experience", experience)
+        res.send(experience);
+
+      })
+      .catch(err => res.status(400).send(err));
+  });
+
+  app.post("/api/experiences/:id", async (req, res) => {
+    ExperienceModel.findOneAndUpdate({ _id: req.params.id }, 
+      {"amountReceived": req.body.amountReceived}, 
+      {useFindAndModify: false})
       .then(experience => {
         res.send(experience);
       })
