@@ -660,6 +660,10 @@ img.location-image {
   background-color: #b1bf92;
 }
 
+.content-wrapper input{
+  color: black;
+}
+
 .survey-cards{
   width: 84%;
   margin: 0 auto;

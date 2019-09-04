@@ -40,7 +40,7 @@ class Experience extends Component {
     this.setState({
       selectedExperience,
       showModal: true,
-      amount: this.state[`amount${index}`] * 100
+      amount: this.state[`amount${index}`]
     });
   };
 
@@ -65,14 +65,14 @@ class Experience extends Component {
           onRequestClose={this.closeModal}
           style={customStyles}
         >
-          <h1>Are you sure you want to pay ${amount}</h1>
+          <h2>Are you sure you want to pay ${amount}</h2>
 
           <button onClick={this.closeModal}>No</button>
 
           <StripeCheckout
             token={this.onStripeToken}
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
-            amount={amount}
+            amount={amount * 100}
           />
         </Modal>
 
@@ -94,7 +94,7 @@ class Experience extends Component {
                 value={this.state[`amount${i}`] || ""}
                 onChange={this.handleInputChange}
               />
-              <button onClick={() => this.handleExperienceSelected(e, i)}>
+              <button onClick={() => this.handleExperienceSelected(e, i)} disabled={e.amountReceived >= e.totalValue ? true : false }>
                 Pay
               </button>
             </div>

@@ -38,8 +38,8 @@ const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 const WebsiteContent = () => (
   <div>
     <TitleBar id="titlebar"></TitleBar>
-    <TopicContainer id="wedding" title="Wedding">
-      <div className="container">
+    {/* <TopicContainer id="wedding" title="Wedding"> */}
+      {/* <div className="container">
         <div className="one-half column">
           <h2>CEREMONY</h2>
           <p>16:45 @ Sveti Marak Church Courtyard</p>
@@ -442,8 +442,8 @@ const WebsiteContent = () => (
         like you, we will only have a suitcase full of clothes so we won't be
         able to carry any items back.
       </p>
-      <p>Thank you in advance!</p>
-    </TopicContainer>
+      <p>Thank you in advance!</p> */}
+    {/* </TopicContainer> */}
   </div>
 );
 

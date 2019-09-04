@@ -3,11 +3,11 @@ import TopicContainer from "./TopicContainer.component";
 
 
 export default () => (
-<TopicContainer id="thingstodo" title="Things to do in Croatia">
+<TopicContainer id="thingstodo" title="Things to do in Ocean Edge">
       <p>
         Since all of you are coming from different parts of the world, we
         presume that you would like to make a full vacation out of your trip to
-        Croatia. In this section we are listing some of the main tourist places
+        Cape Cod. In this section we are listing some of the main tourist places
         to visit and have suggestions for routes to take. As a disclaimer, some
         of these suggestions are compiled from various online sources such as
         Lonely Planet and not locations we have actually visited, but trust us -
@@ -16,74 +16,52 @@ export default () => (
       <br />
 
       <h2>
-        <a href="https://www.lonelyplanet.com/croatia/dubrovnik">DUBROVNIK</a>
+        <a href="https://www.lonelyplanet.com/usa/massachusetts/brewster">BREWSTER</a>
       </h2>
       <p>
         <img
           className="large-image"
-          src={require("../img/dubrovnik.jpg")}
-          alt="Dubrovnik old city"
+          src={require("../img/brewster.jpg")}
+          alt="Brewster"
         />
       </p>
       <p>
-        Located in the very south of the country, Dubrovnik was once called the
-        "Pearl of the Adriatic" for its architecture and importance in trade. We
-        won't pretend that we know much about its history, but it is a place
-        which must be visited and is also a convenient location to fly into and
-        work your way up the coast to Hvar. On top of that, for the 'Game of
-        Thrones' fans, quite a few scenes from this show were filmed in
-        Dubrovnik. See&nbsp;
-        <a href="http://www.telegraph.co.uk/travel/maps-and-graphics/game-of-thrones-filming-locations-guide/">
-          this article
-        </a>{" "}
-        for more information.
+       
+From land to sea and everywhere in between, the Ocean Edge Resort is filled with things to do. Paddleboarding, biking, oyster bed tours, and more — view our event calendar, and start planning your ideal Cape Cod vacation.
       </p>
       <br />
 
       <h2>
-        <a href="https://www.lonelyplanet.com/croatia/plitvice-lakes-national-park/attractions/plitvice-lakes-national-park/a/poi-sig/1019024/1318903">
-          PLITVICE LAKES
+        <a href="https://travel.usnews.com/Cape_Cod_MA/Things_To_Do/Cape_Cod_Rail_Trail_62038/">
+          Cape Cod Rail Trail
         </a>
       </h2>
       <p>
         <img
           className="large-image"
-          src={require("../img/plitvice-lakes.jpg")}
-          alt="Plitvice lakes"
+          src={require("../img/railtrail.jpg")}
+          alt="Cape Cod Rail Trail"
         />
       </p>
       <p>
-        This is a beautiful national park covered with heavy forests and
-        waterfalls. It is in the northern half of the country and is about 2
-        hours drive from Zagreb, the capital of Croatia and 4-5 hours from
-        Split. If you find good flights to Zagreb, Plitvice Lakes can serve as a
-        good midway destination to visit while making you way to the south of
-        the country.
+      Popular with bikers, rollerbladers and horseback riders, this 22-mile paved trail is a breezy ride through the Lower Cape's diverse ecosystems. Previously known as the Old Colony Railroad corridor, the Cape Cod Rail Trail is considered one of the best bike trails in New England. 
       </p>
       <br />
 
       <h2>
-        <a href="https://www.lonelyplanet.com/croatia/dalmatia/hvar-island">
-          HVAR AND THE DALMATIAN ISLANDS
+        <a href="https://travel.usnews.com/Cape_Cod_MA/Things_To_Do/Cape_Cod_National_Seashore_62044/">
+          SEA SHORE
         </a>
       </h2>
       <p>
         <img
           className="large-image"
-          src={require("../img/mljet.jpg")}
-          alt="Mljet"
+          src={require("../img/seashore.jpg")}
+          alt="seashore"
         />
       </p>
       <p>
-        The Dalmatian islands (one of which is Hvar) offer amazing scenery, nice
-        beaches and sailing opportunities. Island hopping, swimming and
-        sunbathing is great way to spend a few days or even a week. Of these
-        islands, Hvar is deemed as the 'party island' while&nbsp;
-        <a href="https://www.lonelyplanet.com/croatia/dalmatia/mljet-island">
-          Mljet
-        </a>{" "}
-        is the most scenic and tranquil. It is located between Hvar and
-        Dubrovnik.
+      In 1961, summer native President John F. Kennedy designated the east shore of the Outer Cape a national park. Today, the 40-mile stretch of coast is recognized as having some of the best beaches on Cape Cod, including Nauset Beach in Eastham, Marconi Beach in Wellfleet and Race Point and Herring Cove beaches in Provincetown.
       </p>
     </TopicContainer>
 );
