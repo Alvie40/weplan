@@ -12,11 +12,7 @@ module.exports = app => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-<<<<<<< HEAD
       res.redirect("/rsvp?loggedIn=true");
-=======
-      res.redirect('/surveys');
->>>>>>> master
     }
   );
 
