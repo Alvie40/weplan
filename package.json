@@ -41,6 +41,7 @@
     "react-modal": "^3.10.1",
     "react-router-dom": "^5.0.1",
     "react-stripe-checkout": "^2.6.3",
+    "require_optional": "^1.0.1",
     "sendgrid": "^5.2.3",
     "stripe": "^4.23.1"
   }
