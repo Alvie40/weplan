@@ -1,19 +1,27 @@
-const keys = require('../config/keys');
-const stripe = require('stripe')(keys.stripeSecretKey);
-const requireLogin = require('../middlewares/requireLogin');
+const keys = require("../config/keys");
+const stripe = require("stripe")(keys.stripeSecretKey);
+const requireLogin = require("../middlewares/requireLogin");
+const ExperienceModel = require("../models/Experience");
 
 module.exports = app => {
-  app.post('/api/stripe', requireLogin, async (req, res) => {
-    const charge = await stripe.charges.create({
-      amount: 500,
-      currency: 'usd',
-      description: '$5 for 5 credits',
-      source: req.body.id
-    });
+  app.post("/api/stripe", async (req, res) => {
+    console.log("req.bodyyy", req.body);
+    const { amount, token, experienceId } = req.body;
+    try {
+      await stripe.charges.create({
+        amount,
+        currency: "usd",
+        source: token
+      });
 
-    req.user.credits += 5;
-    const user = await req.user.save();
-
-    res.send(user);
+      const update = await ExperienceModel.findOneAndUpdate(
+        { _id: experienceId },
+        { $inc: { amountReceived: amount } },
+        { new: true }
+      );
+      res.send(update);
+    } catch (err) {
+      res.status(500).send(err);
+    }
   });
 };
