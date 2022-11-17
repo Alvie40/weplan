@@ -18,7 +18,7 @@
     "react-dom": "^16.0.0-alpha.13",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.10",
+    "react-scripts": "5.0.1",
     "react-scroll": "^1.7.14",
     "react-stickynode": "^2.1.1",
     "react-stripe-checkout": "^2.4.0",
